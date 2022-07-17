@@ -1,11 +1,16 @@
 import {BsSearch, BsCameraVideo, BsBell, BsMicFill, BsYoutube} from 'react-icons/bs';
 import Avatar from 'react-avatar';
 import ReactTooltip from 'react-tooltip';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 function Header({ toggleSidebar}) {
 
+    const [InputValue, setInputValue] = useState('');
     const [notification, setnotification] = useState(2);
+
+    const router = useRouter();
+
     useEffect(() =>{
         // Set a random no
         setnotification(Math.floor(Math.random() * 10));
@@ -34,8 +39,18 @@ function Header({ toggleSidebar}) {
             <div className='flex items-center justify-center bg-gray-200 rounded-lg mr-2 my-2'>
                 <input type='text' placeholder='Search'
                 className='bg-gray-200 rounded-lg px-4 py-2 w-20 text-gray-800 md:w-[20em] focus:outline-none lg:w-[35em]'
+                value={InputValue}
+                onChange={(e) =>{
+                    setInputValue(e.target.value)
+                }}
+                onKeyDown={(e) =>{
+                    if (e.key === 'Enter'){
+                        router.push(`/?query=${InputValue.toLowerCase()}`);
+                    }
+                }}
+
                 />
-                <BsSearch className='mr-3'/>
+                <BsSearch className='mr-3' />
             </div>
                 <BsMicFill className='text-2xl mr-3 hidden md:block' />                
         </div>

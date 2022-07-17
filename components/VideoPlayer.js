@@ -20,7 +20,7 @@ function VideoPlayer({data}) {
           <div className='relative '>
             {loading ? (
               <>
-                <ReactPlayer url={`https://www.youtube.com/watch?v=${item.video.videoId? item.video.videoId: 'Ux_LFXpOrd4'}`} light  height={220} width={380}/>
+                <ReactPlayer url={`https://www.youtube.com/watch?v=${item? item.video.videoId: 'Ux_LFXpOrd4'}`} light  height={220} width={380}/>
                 <span className='absolute bottom-2 right-3 bg-black text-white p-0.5'>{item.video.lengthText}</span>  
               </>
             ) : <Skeleton height={220} width={380} />}
@@ -33,7 +33,7 @@ function VideoPlayer({data}) {
 
             <div>
               <div className='flex justify-between w-80 mb-1'>
-                <div><h2 className='text-xl font-bold'>{item.video.title.length > 45? `${item.video.title.slice(0,45)}...`:item.video.title}</h2></div>
+                <div><h2 className='text-xl font-bold'>{item? item.video.title.length > 45? `${item.video.title.slice(0,45)}...`:item.video.title:<Skeleton />}</h2></div>
                 <div className='rounded-full h-10 w-10 text-center flex items-center justify-center transition-all hover:bg-gray-100'><BsThreeDots size={20} className='rotate-90'/></div>
               </div>
               <div className='opacity-60 font-semibold'>

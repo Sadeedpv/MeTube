@@ -15,7 +15,7 @@ function VideoPlayer({data}) {
     <div className='flex flex-wrap gap-5 items-center justify-center my-10'>
       {data && data.map((item, index) => {
         return (      
-          <div className='flex flex-col items-center' key={index}>
+          <div className='flex flex-col items-center ml-10 md:ml-0' key={index}>
 
           <div className='relative '>
             {loading ? (

@@ -8,7 +8,6 @@ import axios from 'axios'
 
 
 export default function Home({data}) {
-  console.log(data)
   // Global state for Sidebar
   const [isOpen, setIsOpen] = useState(false);
   const toggleSidebar = () => setIsOpen(!isOpen);

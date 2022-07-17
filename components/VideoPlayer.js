@@ -29,7 +29,7 @@ function VideoPlayer({data}) {
           </div>
 
           <div className='flex mt-4 ml-1'>
-            <img src='/youtube.jpg' alt='channel-logo' className='rounded-full w-10 h-10 mr-3 ' />
+            <img src='/youtube.jpg' alt='channel-logo' className='rounded-full mr-3 w-10 h-10 object-cover'/>
 
             <div>
               <div className='flex justify-between w-80 mb-1'>

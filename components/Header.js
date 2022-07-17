@@ -3,6 +3,7 @@ import Avatar from 'react-avatar';
 import ReactTooltip from 'react-tooltip';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 function Header({ toggleSidebar}) {
 
@@ -31,7 +32,7 @@ function Header({ toggleSidebar}) {
         {/* Header / Youtubelogo */}
         <div className='flex items-center justify-center relative ml-1 pt-1 hover:text-gray-800'>
             <BsYoutube className='text-4xl text-red-600 pr-1'/>
-            <a href="/" className='text-2xl text-black-600 font-bold tracking-tighter'>MeTube</a>
+            <Link href="/" className='text-2xl text-black-600 font-bold tracking-tighter'>MeTube</Link>
             <span className='absolute -right-2 -top-0.5 pl-4 opacity-50 text-[15px]'>IN</span>
         </div>
         {/* Query field */}

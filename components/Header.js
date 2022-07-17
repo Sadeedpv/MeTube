@@ -32,7 +32,7 @@ function Header({ toggleSidebar}) {
         {/* Header / Youtubelogo */}
         <div className='flex items-center justify-center relative ml-1 pt-1 hover:text-gray-800'>
             <BsYoutube className='text-4xl text-red-600 pr-1'/>
-            <Link href="/" className='text-2xl text-black-600 font-bold tracking-tighter'>MeTube</Link>
+            <Link href="/" ><h2 className='text-2xl text-black-600 font-bold tracking-tighter'>MeTube</h2></Link>
             <span className='absolute -right-2 -top-0.5 pl-4 opacity-50 text-[15px]'>IN</span>
         </div>
         {/* Query field */}

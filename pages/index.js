@@ -55,6 +55,7 @@ export async function getServerSideProps(context){
       params: {
         query: query,
         hl: 'en',
+        type: 'v'
       },
       headers: {
         'X-RapidAPI-Key': process.env.NEXT_APP_API_KEY,

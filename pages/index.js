@@ -38,7 +38,7 @@ export default function Home({data}) {
         </div>     
       </div>
       <div className={Mounted? 'hidden': 'grid place-items-center min-h-screen text-red-500'}>
-        <BsYoutube size={95} />
+        <BsYoutube size={115} />
       </div>
     </main>
     </div>

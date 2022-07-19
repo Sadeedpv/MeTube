@@ -11,6 +11,7 @@
 - Infinite scroll and more
 
 ### 2022 all rights reserved &#169;
+#### Author: [@Sadeedpv](https://Github.com/Sadeedpv)
 
 
 
